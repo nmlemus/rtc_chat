@@ -14,7 +14,7 @@ angular.module('rooms').controller('RoomsController', ['$scope', '$stateParams',
 
 			// Redirect after save
 			room.$save(function(response) {
-				$location.path('rooms/' + response.name);
+				$location.path('rooms/' + response._id);
 
 				// Clear form fields
 				$scope.name = '';
