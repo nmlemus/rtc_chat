@@ -6,6 +6,9 @@ var init = require('./config/init')(),
 	config = require('./config/config'),
 	mongoose = require('mongoose'),
 	chalk = require('chalk');
+var socketio = require('socket.io');
+var easyrtc = require("easyrtc");
+var http = require('http');
 
 /**
  * Main application entry file.
@@ -28,6 +31,10 @@ require('./config/passport')();
 
 // Start the app by listening on <port>
 app.listen(config.port);
+
+var server = http.createServer(app);
+var socketServer = socketio.listen(server, {"log level":1});
+var rtcServer = easyrtc.listen(app, socketServer);
 
 // Expose app
 exports = module.exports = app;

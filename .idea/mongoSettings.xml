@@ -10,6 +10,7 @@
               <option value="localhost:27017" />
             </list>
           </option>
+          <option name="userDatabase" value="goblob-dev" />
         </ServerConfiguration>
       </list>
     </option>
