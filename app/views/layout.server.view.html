@@ -46,7 +46,7 @@
 <body class="ng-cloak">
 	<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
 	<section class="content">
-		<section class="container">
+		<section class="container-full">
 			{% block content %}{% endblock %}
 		</section>
 	</section>
@@ -63,6 +63,12 @@
 	<!--Livereload script rendered -->
 	<script type="text/javascript" src="http://{{request.hostname}}:35729/livereload.js"></script>
 	{% endif %}
+
+	<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
+
+				<p class="pull-center"><a href="http://goblob.com"></a> &nbsp; ©Copyright 2015 Goblob</p>
+
+	</div>
 </body>
 
 </html>
